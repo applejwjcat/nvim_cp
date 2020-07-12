@@ -1,7 +1,7 @@
 " File              : init.vim
 " Author            : Tristan <15997232823@163.com>
 " Date              : Sun Jul 12 2020 11:53:20 AM CST
-" Last Modified Date: Sun Jul 12 2020 14:13:03 PM CST
+" Last Modified Date: Sun Jul 12 2020 16:10:20 PM CST
 " Last Modified By  : Tristan <15997232823@163.com>
 
 let mapleader = ","      " 定义<leader>键
@@ -258,6 +258,26 @@ let g:NERDTreeIndicatorMapCustom = {
             \ 'Ignored'   : '☒',
             \ "Unknown"   : "?"
             \ }
+"Coc
+let g:coc_global_extensions=[
+            \'coc-actions',
+            \'coc-clangd',
+            \'coc-css',
+            \'coc-diagnostic',
+            \ 'coc-explorer',
+            \ 'coc-html',
+            \ 'coc-json',
+            \ 'coc-pyright',
+            \ 'coc-python',
+            \ 'coc-snippets',
+            \ 'coc-sourcekit',
+            \ 'coc-stylelint',
+            \ 'coc-syntax',
+            \ 'coc-tasks',
+            \ 'coc-tslint-plugin',
+            \ 'coc-tsserver',
+            \]
+"
 
 " LeaderF
 nnoremap <leader>f :LeaderfFile ~<cr>
