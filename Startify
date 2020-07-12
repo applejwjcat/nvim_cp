@@ -1,0 +1,29 @@
+
+            __                __                
+    __   __/_/___ ___  ____  / /_  _______      
+    \ \ / / / __ `__ \/ __ \/ / / / / ___/      
+     \ V / / / / / / / /_/ / / /_/ (__  )       
+      \_/_/_/ /_/ /_/ ,___/_/\____/____/        
+                   /_/                          
+                                                
+    Keep It Simple, Stupid.                     
+
+   [e]  <empty buffer>
+
+   MRU
+
+   [0]   ~/.vimrc
+   [1]   ~/.config/nvim/init.vim
+   [2]   ~/.config/nvim/coc-settings.json
+   [3]   ~/.vimrc.custom.plugins
+   [4]   ~/C++/hello.cpp
+   [5]   ~/hello.cpp
+   [6]   ~/.vimrc.custom.config
+   [7]   ~/.zshrc
+
+   MRU /home/appledog/.config/nvim
+
+   [8]   init.vim
+   [9]   coc-settings.json
+
+   [q]  <quit>
