@@ -1,0 +1,6 @@
+{
+    "snippets.ultisnips.directories": [
+        "$HOME/.config/nvim/UltiSnips/",
+        "$HOME/.config/nvim/plugged/ultisnips/UltiSnips/"
+    ]
+}
