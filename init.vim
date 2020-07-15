@@ -1,7 +1,7 @@
 " File              : init.vim
 " Author            : Tristan <15997232823@163.com>
 " Date              : Sun Jul 12 2020 11:53:20 AM CST
-" Last Modified Date: Mon Jul 13 2020 22:25:04 PM CST
+" Last Modified Date: Wed Jul 15 2020 18:32:47 PM CST
 " Last Modified By  : Tristan <15997232823@163.com>
 
 let mapleader = ","      " 定义<leader>键
@@ -135,9 +135,8 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'chxuan/change-colorscheme'
 Plug 'chxuan/prepare-code'
 Plug 'chxuan/vim-buffer'
-Plug 'chxuan/vimplus-startify'
-Plug 'chxuan/tagbar'
-Plug 'Yggdroot/LeaderF'
+Plug 'mhinz/vim-startify'
+Plug 'majutsushi/tagbar'
 Plug 'mileszs/ack.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'haya14busa/incsearch.vim'
@@ -148,7 +147,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'godlygeek/tabular'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-commentary'
+Plug 'preservim/nerdcommenter'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-endwise'
 Plug 'octol/vim-cpp-enhanced-highlight'
@@ -163,9 +162,6 @@ Plug 'kana/vim-textobj-syntax'
 Plug 'kana/vim-textobj-function'
 Plug 'sgur/vim-textobj-parameter'
 Plug 'Shougo/echodoc.vim'
-Plug 'terryma/vim-smooth-scroll'
-Plug 'rhysd/clever-f.vim'
-Plug 'vim-scripts/indentpython.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " 加载自定义插件
@@ -184,7 +180,7 @@ nnoremap <leader>vc :edit ~/.vimrc.custom.config<cr>
 nnoremap <leader>vp :edit ~/.vimrc.custom.plugins<cr>
 
 " 查看vimplus的help文件
-nnoremap <leader>h :view +let\ &l:modifiable=0 ~/.vimplus/help.md<cr>
+"nnoremap <leader>h :view +let\ &l:modifiable=0 ~/.vimplus/help.md<cr>
 
 " 打开当前光标所在单词的vim帮助文档
 nnoremap <leader>H :execute ":help " . expand("<cword>")<cr>
@@ -262,11 +258,6 @@ nnoremap <silent> <leader>D :BufOnly<cr>
 let g:AutoPairsShortcutToggle = '<c-p>'
 let g:AutoPairsShortcutJump = '<c-n>'
 
-" vim-edit
-"nnoremap Y :CopyText<cr>
-"nnoremap D :DeleteText<cr>
-"nnoremap C :ChangeText<cr>
-"nnoremap <leader>r :ReplaceTo<space>
 
 " nerdtree
 nnoremap <silent> <leader>n :NERDTreeToggle<cr>
@@ -280,7 +271,7 @@ let g:NERDTreeDirArrowCollapsible='▼'
 
 " tagbar
 let g:tagbar_width = 30
-nnoremap <silent> <leader>t :TagbarToggle<cr>
+nnoremap <silent> <leader>t :TagbarToggle<cr><c-w>l
 
 " incsearch.vim
 map /  <Plug>(incsearch-forward)
@@ -291,6 +282,8 @@ map g/ <Plug>(incsearch-stay)
 let g:EasyMotion_smartcase = 1
 map <leader>w <Plug>(easymotion-bd-w)
 nmap <leader>w <Plug>(easymotion-overwin-w)
+map  <leader>/ <Plug>(easymotion-sn)
+omap <leader>/ <Plug>(easymotion-tn)
 
 " nerdtree-git-plugin
 let g:NERDTreeIndicatorMapCustom = {
@@ -327,15 +320,7 @@ let g:coc_global_extensions=[
             \ 'coc-tsserver',
             \ 'coc-yank'
             \]
-"
 
-" LeaderF
-nnoremap <leader>f :LeaderfFile ~<cr>
-let g:Lf_WildIgnore = {
-            \ 'dir': ['.svn','.git','.hg','.vscode','.wine','.deepinwine','.oh-my-zsh'],
-            \ 'file': ['*.sw?','~$*','*.bak','*.exe','*.o','*.so','*.py[co]']
-            \}
-let g:Lf_UseCache = 0
 
 " ack
 nnoremap <leader>F :Ack!<space>
@@ -346,12 +331,6 @@ let g:echodoc_enable_at_startup = 1
 " tabular
 nnoremap <leader>l :Tab /\|<cr>
 nnoremap <leader>= :Tab /=<cr>
-
-" vim-smooth-scroll
-noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
-noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
-noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
-noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
 " gv
 nnoremap <leader>g :GV<cr>
