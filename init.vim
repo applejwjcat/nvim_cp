@@ -1,7 +1,7 @@
 " File              : init.vim
 " Author            : Tristan <15997232823@163.com>
 " Date              : Sun Jul 12 2020 11:53:20 AM CST
-" Last Modified Date: Wed Jul 15 2020 18:32:47 PM CST
+" Last Modified Date: Fri Jul 17 2020 14:11:51 PM CST
 " Last Modified By  : Tristan <15997232823@163.com>
 
 let mapleader = ","      " 定义<leader>键
@@ -24,6 +24,9 @@ set virtualedit=block,onemore   " 允许光标出现在最后一个字符的后�
 set autochdir            " 自动切换当前目录为打开文件所在的目录
 set lazyredraw 
 set visualbell
+set updatetime=1000
+set cmdheight=2
+set shortmess+=c
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 代码缩进和排版
@@ -165,8 +168,8 @@ Plug 'Shougo/echodoc.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " 加载自定义插件
-if filereadable(expand($HOME . '/.config/nvim/.vimrc.custom.plugins'))
-    source $HOME/.vimrc.custom.plugins
+if filereadable(expand($MYNVIM . '/.vimrc.custom.plugins'))
+    source $MYNVIM/.vimrc.custom.plugins
 endif
 
 call plug#end()
@@ -176,8 +179,8 @@ runtime macros/matchit.vim
 
 " 编辑vimrc相关配置文件
 nnoremap <leader>e :edit $MYVIMRC<cr>
-nnoremap <leader>vc :edit ~/.vimrc.custom.config<cr>
-nnoremap <leader>vp :edit ~/.vimrc.custom.plugins<cr>
+nnoremap <leader>vc :edit $MYNVIM/.vimrc.custom.config<cr>
+nnoremap <leader>vp :edit $MYNVIM/.vimrc.custom.plugins<cr>
 
 " 查看vimplus的help文件
 "nnoremap <leader>h :view +let\ &l:modifiable=0 ~/.vimplus/help.md<cr>
@@ -246,7 +249,7 @@ nnoremap <silent> <F12> :ShowColorScheme<cr>
 inoremap <silent> <F12> <esc> :ShowColorScheme<cr>
 
 " prepare-code
-let g:prepare_code_plugin_path = expand($HOME . "/.config/nvim/plugged/prepare-code")
+let g:prepare_code_plugin_path = expand($MYNVIM . "/plugged/prepare-code")
 
 " vim-buffer
 nnoremap <silent> <M-p> :PreviousBuffer<cr>
@@ -300,7 +303,6 @@ let g:NERDTreeIndicatorMapCustom = {
             \ }
 "Coc
 let g:coc_global_extensions=[
-            \ 'coc-actions',
             \ 'coc-clangd',
             \ 'coc-css',
             \ 'coc-diagnostic',
@@ -338,8 +340,8 @@ nnoremap <leader>G :GV!<cr>
 nnoremap <leader>gg :GV?<cr>
 
 " 加载自定义配置
-if filereadable(expand($HOME . '/.vimrc.custom.config'))
-    source $HOME/.vimrc.custom.config
+if filereadable(expand($MYNVIM . '/.vimrc.custom.config'))
+    source $MYNVIM/.vimrc.custom.config
 endif
 
 " use <tab> for trigger completion and navigate to the next complete item
