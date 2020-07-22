@@ -1,7 +1,7 @@
 " File              : init.vim
 " Author            : Tristan <15997232823@163.com>
 " Date              : Sun Jul 12 2020 11:53:20 AM CST
-" Last Modified Date: Fri Jul 17 2020 14:11:51 PM CST
+" Last Modified Date: Wed Jul 22 2020 09:55:36 AM CST
 " Last Modified By  : Tristan <15997232823@163.com>
 
 let mapleader = ","      " 定义<leader>键
@@ -302,12 +302,16 @@ let g:NERDTreeIndicatorMapCustom = {
             \ "Unknown"   : "?"
             \ }
 "Coc
+           " \ 'coc-clangd',
 let g:coc_global_extensions=[
-            \ 'coc-clangd',
+            \ 'coc-actions',
             \ 'coc-css',
             \ 'coc-diagnostic',
             \ 'coc-explorer',
             \ 'coc-html',
+            \ 'coc-flutter',
+            \ 'coc-stylelint',
+            \ 'coc-git',
             \ 'coc-json',
             \ 'coc-pyright',
             \ 'coc-python',
@@ -320,7 +324,7 @@ let g:coc_global_extensions=[
             \ 'coc-tasks',
             \ 'coc-tslint-plugin',
             \ 'coc-tsserver',
-            \ 'coc-yank'
+            \ 'coc-yank',
             \]
 
 
