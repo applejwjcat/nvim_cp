@@ -1,7 +1,7 @@
 " File              : init.vim
 " Author            : Tristan <15997232823@163.com>
 " Date              : Sun Jul 12 2020 11:53:20 AM CST
-" Last Modified Date: Wed Jul 22 2020 13:21:48 PM CST
+" Last Modified Date: Sun Jul 26 2020 10:27:46 AM CST
 " Last Modified By  : Tristan <15997232823@163.com>
 
 let mapleader = ","      " 定义<leader>键
@@ -314,6 +314,7 @@ let g:coc_global_extensions=[
             \ 'coc-todolist',
             \ 'coc-translator',
             \ 'coc-eslint',
+            \ 'coc-lists',
             \ 'coc-git',
             \ 'coc-json',
             \ 'coc-python',
@@ -329,7 +330,7 @@ let g:coc_global_extensions=[
             \ 'coc-yank',
             \ 'coc-yaml'
             \]
-
+let g:coc_data_home='/home/appledog/.config/nvim/coc'
 
 " ack
 nnoremap <leader>F :Ack!<space>
