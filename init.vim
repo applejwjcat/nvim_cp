@@ -1,9 +1,9 @@
-" File              : init.vim
-" Author            : Tristan <15997232823@163.com>
-" Date              : Sun Jul 12 2020 11:53:20 AM CST
-" Last Modified Date: Sun Jul 26 2020 10:27:46 AM CST
-" Last Modified By  : Tristan <15997232823@163.com>
-
+" _ __ ___  _   _   _ __   ___  _____   _(_)_ __ ___  
+"| '_ ` _ \| | | | | '_ \ / _ \/ _ \ \ / / | '_ ` _ \ 
+"| | | | | | |_| | | | | |  __/ (_) \ V /| | | | | | |
+"|_| |_| |_|\__, | |_| |_|\___|\___/ \_/ |_|_| |_| |_|
+"           |___/                                     
+"
 let mapleader = ","      " 定义<leader>键
 set nocompatible         " 设置不兼容原始vi模式
 filetype on              " 设置开启文件类型侦测
